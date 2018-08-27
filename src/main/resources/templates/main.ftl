@@ -42,7 +42,7 @@
     <div class="card my-3">
         <#if message.filename??>
         <img src="/img/${message.filename}" class="card-img-top">
-    </#if>
+        </#if>
     <div class="m-2">
         <span>${message.text}</span>
         <i>${message.tag}</i>
