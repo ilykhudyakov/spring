@@ -4,7 +4,7 @@
 <@c.page>
 ${message?ifExists}
 <div class="mb-1">
-    Login page
+
 </div>
 <@l.login "/login" false/>
 </@c.page>

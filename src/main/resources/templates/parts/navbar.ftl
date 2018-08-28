@@ -23,6 +23,12 @@
         </ul>
 
         <div class="navbar-text mr-3">${name}</div>
-        <@l.logout />
+        <#if isActive>
+            <@l.logout />
+        </#if>
+        <#if !isActive>
+            <@l.newuser />
+            <@l.signin />
+        </#if>
     </div>
 </nav>

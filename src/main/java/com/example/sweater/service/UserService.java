@@ -33,7 +33,7 @@ public class UserService implements UserDetailsService {
             return false;
         }
 
-        user.setActive(true);
+        user.setActive(false);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
         userRepo.save(user);
@@ -43,8 +43,9 @@ public class UserService implements UserDetailsService {
                     "Hello, %s! \n" +
                             "Welcome to Sweater. Please, visit next link: http://%s:5834/activate/%s",
                     user.getUsername(),
-//                    "ikhdyakov.sknt.ru",
-                    "192.168.0.102",
+//                    "ikhudyakov.ml",
+                    "ikhdyakov.sknt.ru",
+//                    "192.168.0.102",
 //                    "localhost",
                     user.getActivationCode()
             );
@@ -62,6 +63,7 @@ public class UserService implements UserDetailsService {
         }
 
         user.setActivationCode(null);
+        user.setActive(true);
 
         userRepo.save(user);
 
