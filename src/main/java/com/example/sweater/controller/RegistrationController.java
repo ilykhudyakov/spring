@@ -26,8 +26,9 @@ public class RegistrationController {
             model.put("message", "user exists!");
             return "registration";
         }
+        model.put("message", "registration completed successfully! check your mail");
 
-        return "redirect:/login";
+        return "login";
     }
 
     @GetMapping("/activate/{code}")

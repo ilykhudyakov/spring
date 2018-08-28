@@ -1,9 +1,9 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-List of users
+<h3>List of users</h3>
 
-<table class="table">
+<table class="table table-striped">
     <thead>
     <tr>
         <th scope="col">Name</th>
