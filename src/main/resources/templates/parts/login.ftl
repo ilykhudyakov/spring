@@ -88,6 +88,6 @@
 <#macro newuser>
 <form action="/registration" method="post">
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
-    <a href="/registration" class="col-sm-2 col-form-label">Registration</a>
+    <a href="/registration" class="pr-4 col-form-label">Registration</a>
 </form>
 </#macro>
